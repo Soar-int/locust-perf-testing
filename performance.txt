@@ -1,0 +1,12 @@
+
+Feature: BDD Load Testing
+
+Scenario: Load test client registration
+    Given I have random registration data
+    When I send a POST request to "/client_registeration"
+    Then I should get a 200 response
+
+Scenario: Load test client login
+    Given I have valid login credentials
+    When I send a POST request to "/client_login"
+    Then I should get a 200 response
